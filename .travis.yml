@@ -21,6 +21,6 @@ git:
   depth: 99999
 
 after_success:
-  - julia -e 'using Pkg; ps=PackageSpec(name="Documenter", version="0.19"); Pkg.add(ps); Pkg.pin(ps)'
+  - julia -e 'using Pkg; ps=PackageSpec(name="Documenter", version="0.19.5"); Pkg.add(ps); Pkg.pin(ps)'
   - julia docs/make.jl
   - julia -e 'include(Pkg.dir("Highlights", "test", "coverage.jl"))'
